@@ -29,12 +29,15 @@ void start()
     g_free(windows_list);
   }
   
+  /* Create main window */
   main_window = mainwindow_new();
   
-  /* tabs are not yet done
+  /* Add window to application */
+  gtk_application_add_window(app, GTK_WINDOW(main_window));
+  
+  /* Not stable
    * this is for testing
   */
-  _new_tab();
   _new_tab();
   
   gtk_widget_show_all(main_window);
