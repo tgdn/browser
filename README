@@ -1,0 +1,4 @@
+Download sources then run:
+    ./compile.sh
+
+Then if there are no errors, binary should be in bin/
