@@ -36,9 +36,6 @@ void start()
   */
   _new_tab();
   _new_tab();
-  _new_tab();
-  _new_tab();
-  _new_tab();
   
   gtk_widget_show_all(main_window);
   

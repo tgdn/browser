@@ -79,11 +79,12 @@ void notebook_new_tab(GtkWidget *notebook)
 {
   Notebook *nb = (Notebook *)notebook;
   
-  GtkVBox *box = gtk_vbox_new(TRUE, 0);
-  gtk_widget_set_can_focus(GTK_WIDGET(box), FALSE);
+  //GtkVBox *box = gtk_vbox_new(TRUE, 0);
+  GtkWidget *tabview = tabview_new();
+  gtk_widget_set_can_focus(tabview, FALSE);
   
   GtkLabel *label = gtk_label_new("Test tab");
   gtk_widget_set_can_focus(GTK_WIDGET(label), FALSE);
   
-  gtk_notebook_append_page(GTK_NOTEBOOK(notebook), GTK_WIDGET(box), GTK_WIDGET(label));
+  gtk_notebook_append_page(GTK_NOTEBOOK(notebook), tabview, GTK_WIDGET(label));
 }
