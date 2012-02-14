@@ -30,11 +30,16 @@ void start()
   }
   
   main_window = mainwindow_new();
+  
+  /* tabs are not yet done
+   * this is for testing
+  */
   _new_tab();
   _new_tab();
   _new_tab();
   _new_tab();
   _new_tab();
+  
   gtk_widget_show_all(main_window);
   
   gtk_main(); 
