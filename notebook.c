@@ -39,6 +39,9 @@ static void notebook_init(Notebook *notebook)
   GtkWidget *nb = GTK_WIDGET(notebook);
   
   gtk_notebook_set_group_name(GTK_NOTEBOOK(nb), "main_tabs");
+  gtk_notebook_set_scrollable(GTK_NOTEBOOK(nb), TRUE);
+  
+  
   gtk_widget_set_can_focus(nb, FALSE);
   //gtk_widget_set_size_request(nb, 200, 200);
   //gtk_window_resize(GTK_NOTEBOOK(nb), 600, 450);
@@ -79,8 +82,9 @@ void notebook_new_tab(GtkWidget *notebook)
 {
   Notebook *nb = (Notebook *)notebook;
   
-  //GtkVBox *box = gtk_vbox_new(TRUE, 0);
   GtkWidget *tabview = tabview_new();
+  gtk_notebook_set_tab_reorderable(GTK_NOTEBOOK(notebook), tabview, TRUE);
+  gtk_notebook_set_tab_detachable(GTK_NOTEBOOK(notebook), tabview, TRUE);
   gtk_widget_set_can_focus(tabview, FALSE);
   
   GtkWidget *label = gtk_label_new("Test tab");

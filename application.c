@@ -5,13 +5,13 @@ GtkWidget *main_window = NULL;
 
 void init_application (int argc, char *argv[])
 {
-  const gchar *application_name = "Learning application";
+  const gchar *application_name = "Browser";
   g_set_application_name(application_name);
 
-  const gchar *prgname = "Learning application";
+  const gchar *prgname = "Browser";
   g_set_prgname(prgname);
   
-  const gchar *application_id = "net.launchpad.Learning";
+  const gchar *application_id = "net.launchpad.Browser";
   GApplicationFlags flags = G_APPLICATION_HANDLES_COMMAND_LINE;
   app = gtk_application_new (application_id, flags);
   
